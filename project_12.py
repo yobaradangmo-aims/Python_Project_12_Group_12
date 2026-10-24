@@ -14,5 +14,22 @@ def simulate(days, beta, gamma, N=1000, I0=1, immune=0):
         S, I, R = S - new_infected, I + new_infected - new_recovered, R + new_recovered
         results.append((day, S, I, R))
     return results
-    
 print(simulate(1, 0.3, 0.1))
+
+
+
+#task2
+def peak_day(results):
+    day, S, I, R = max(results, key=lambda row: row[2])
+    return day, I
+
+most_sick = simulate(300, 0.3, 0.1)
+day_peak, patient_of_peak = peak_day(most_sick)
+print(f"The day: {day_peak}, sick people: {patient_of_peak:.2f}, final R: {most_sick[-1][3]:.2f}")
+    
+
+    
+
+
+
+
