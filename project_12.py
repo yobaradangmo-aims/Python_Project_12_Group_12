@@ -79,3 +79,28 @@ threshold = N * (1 - 1 / R0)
 
 print("Theoretical threshold:", threshold)
 print("Difference:", threshold - immune_min)
+
+# Extra : lockdown
+def simulate_lockdown(days, beta, gamma, lockdown_day=20, factor=0.5, N=1000, I0=1, immune=0):
+    S = N - I0 - immune
+    I = I0
+    R = immune
+    results = [(0, S, I, R)]
+    for day in range(1, days + 1):
+        if day > lockdown_day:
+            b = beta * factor
+        else:
+            b = beta
+        new_infected = b * S * I / N
+        new_recovered = gamma * I
+        S, I, R = S - new_infected, I + new_infected - new_recovered, R + new_recovered
+        results.append((day, S, I, R))
+    return results
+
+normal = simulate(300, 0.3, 0.1)
+lock = simulate_lockdown(300, 0.3, 0.1, lockdown_day=20, factor=0.5)
+d1, p1 = peak_day(normal)
+d2, p2 = peak_day(lock)
+print(f"Sans lockdown : pic I={p1:.2f} (jour {d1}), R final={normal[-1][3]:.2f}")
+print(f"Avec lockdown : pic I={p2:.2f} (jour {d2}), R final={lock[-1][3]:.2f}")
+print(f"The peak decreases by {p1 - p2:.2f} people ({(1 - p2/p1)*100:.0f}%) and occurs {d2 - d1} days later")
