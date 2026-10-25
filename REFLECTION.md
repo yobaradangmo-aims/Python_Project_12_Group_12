@@ -37,7 +37,7 @@ I learned to use `max` with a `key`, to unpack a tuple into
 several variables, and to put code in a function so that it can be reused. Without
 `key`, `max` would compare the days instead of the sick people.
 
-### [Name 3] — Task 3: different values of beta
+### SALIMATA GUEYE — Task 3: different values of beta
 
 I was responsible for Task 3: finding for which `beta` the number of sick people stops growing.
 
