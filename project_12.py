@@ -36,6 +36,20 @@ for beta in [0.05, 0.08, 0.1, 0.15, 0.2, 0.3]:
     print(f"beta={beta:<5} R0={beta / 0.1:.1f}  peak I={patient_of_peak:7.2f} (day {day_peak:3})  -> {grows}")
     
 
+#Task 4: herd immunity
+day, i = peak_day(simulate(300, 0.3, 0.1, immune=700))
+print(f"immune=700 -> peak I={i:.2f} (day {day})")
 
+for im in [300, 400, 500, 600,700]:
+    day_peak, patient_of_peak = peak_day(simulate(300, 0.3, 0.1, immune=im))
+    stops = "stops" if patient_of_peak <= 1 else "grows"
+    print(f"immune={im:<4} peak I={patient_of_peak:7.2f} (day {day_peak:3})  -> {stops}")
+
+# Find the smallest value that stops the disease
+for im in range(0, 1000):
+    day_peak, patient_of_peak = peak_day(simulate(300, 0.3, 0.1, immune=im))
+    if patient_of_peak <= 1:
+        print(f"Smallest immune that stops the disease: {im}")
+        break
 
 
