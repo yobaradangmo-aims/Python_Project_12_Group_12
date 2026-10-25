@@ -52,4 +52,30 @@ for im in range(0, 1000):
         print(f"Smallest immune that stops the disease: {im}")
         break
 
+# Think and explain
 
+beta = 0.3
+gamma = 0.1
+I0 = 1
+N = 1000
+
+R0 = beta / gamma
+
+def disease_grow():
+    for im in range(0, N - I0 + 1):
+        S = N - I0 - im
+        R_eff = R0 * S / N
+
+        if R_eff <= 1:
+            return im, R_eff
+
+immune_min, R_eff = disease_grow()
+
+print("Smallest immune:", immune_min)
+print("Effective reproduction number:", R_eff)
+
+# Compare with theoretical threshold
+threshold = N * (1 - 1 / R0)
+
+print("Theoretical threshold:", threshold)
+print("Difference:", threshold - immune_min)
