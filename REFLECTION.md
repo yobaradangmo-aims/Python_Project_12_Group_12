@@ -41,3 +41,8 @@ soon as the smallest value was found.
 
 
 
+Task 3:In this code, I have used a 'for' loop that varies the beta parameter between 
+0.05 and 0.3, while keeping gamma constant at 0.1. For each value, it simulates 300 days, identifies
+the point in time when the number of infected individuals is at its highest, and then checks whether
+this peak exceeds 1. For each case, it displays the beta value, R0, the peak, and the corresponding day.
+
