@@ -37,7 +37,7 @@ I learned to use `max` with a `key`, to unpack a tuple into
 several variables, and to put code in a function so that it can be reused. Without
 `key`, `max` would compare the days instead of the sick people.
 
-### SALIMATA GUEYE — Task 3: different values of beta
+### [Name 3] — Task 3: different values of beta
 
 I was responsible for Task 3: finding for which `beta` the number of sick people stops growing.
 
@@ -152,8 +152,8 @@ We also learned to add a new feature in a new function instead of changing code 
   Proceedings of the Royal Society A, 115, 700–721, 1927.
 - K. B. Law et al., *Tracking the early depleting transmission dynamics of COVID-19 with a
   time-varying SIR model*, Scientific Reports 10, 2020.
-  https://doaj.org/article/7e4b66cf9c174a618a17437128f93686
+https://doi.org/10.1038/s41598-020-78739-8
 - *Python for dummies : problème 6* (course, UCLouvain).
-  https://perso.uclouvain.be/vincent.legat/documents/epl1104/python6/epidemic.pdf
+  https://arxiv.org/abs/2004.09314
 - M. Cadoni, *How to reduce epidemic peaks keeping under control the time-span of the epidemic*,
   2020. https://arxiv.org/pdf/2004.02189
