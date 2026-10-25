@@ -51,7 +51,7 @@ I learned to reuse functions written by the others (`simulate` and `peak_day`) i
 and to write a short condition with `"grows" if ... else "does NOT grow"`.
 I also understood the Kermack–McKendrick threshold: the disease spreads only when `R0 > 1`.
 
-### [Name 4] — Task 4: herd immunity
+### AFFOGNON Klarita Pérèz — Task 4: herd immunity
 
 I was responsible for Task 4: finding how many immune people are needed to stop the disease.
 
