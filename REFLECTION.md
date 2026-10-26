@@ -21,7 +21,7 @@ I checked it with the tests: `simulate(1, 0.3, 0.1)` gives
 I learned that the three values must be updated at the same time. If we update S first on its
 own line, the formula for I uses the new S instead of today's S, and the result is wrong.
 
-### [Name 2] — Task 2: the peak of the epidemic
+### SAMBA DIALLO — Task 2: the peak of the epidemic
 
 I was responsible for Task 2: finding the peak of the epidemic with `beta = 0.3`
 and `gamma = 0.1`.
